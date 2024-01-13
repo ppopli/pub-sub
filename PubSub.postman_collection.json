@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "8005c034-934d-427c-8a06-521bdf231bf1",
+		"name": "PubSub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31140126"
+	},
+	"item": [
+		{
+			"name": "CreateTopic",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "publish message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"How are you?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test-topic/publish",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test-topic",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubscribeTopic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subscriber\":\"xyz_124\",\n    \"webhook_endpoint\": \"https://webhook.site/3504a9ea-fbdf-4b4f-b3be-bad112a9f03ea\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test-topic/subscribe",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test-topic",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnSubscribeTopic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subscriber\" : \"xyz_124\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test-topic/unsubscribe",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test-topic",
+						"unsubscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
