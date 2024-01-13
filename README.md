@@ -61,5 +61,11 @@ curl --location 'localhost:8080/test-topic/publish' \
 }'
 ```
 
+### HLD
+![HLD Doc](https://github.com/ppopli/pub-sub/edit/main/hld.png)
+
+### DB Schem
+![DB Schema] (https://github.com/ppopli/pub-sub/edit/main/db-schema.png)
+
 
 
