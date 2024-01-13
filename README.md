@@ -15,12 +15,14 @@ A docker compose file has been provided in docker folder. Below are the steps to
 }
 
 ```
-4) To unsubscribe to topic, use ```POST /{topic}/unsubscribe - unsubscribe to a topic
+4) To unsubscribe to topic, use
+```POST /{topic}/unsubscribe - unsubscribe to a topic
 {
 “subscriber”: “xyz_123”,
 }
  ``` 
-5) To publish message use ```POST /{topic}/publish - publish a message to a topic
+5) To publish message use
+```POST /{topic}/publish - publish a message to a topic
 {
  “message”: “hello, webb.ai!”
 }
