@@ -20,7 +20,7 @@ public interface MessageOutboxRepository extends JpaRepository<MessageOutbox, UU
     @Modifying
     @Query(value = "Update message_outbox set status = 'IN_PROGRESS' " +
             "where id in (SELECT id FROM message_outbox WHERE status = 'PENDING' " +
-            "ORDER BY created_at ASC LIMIT :limit) RETURNING *", nativeQuery = true)
+            "ORDER BY created_at ASC LIMIT :limit FOR UPDATE SKIP LOCKED) RETURNING *", nativeQuery = true)
     @Transactional(Transactional.TxType.REQUIRES_NEW)
     Optional<List<MessageOutbox>> updateStatusToInProgress(@Param("limit") int limit);
 
